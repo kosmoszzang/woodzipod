@@ -22,6 +22,8 @@ html, body{font-family: 'San Francisco', 'Noto Sans KR', sans-serif;}
     max-width: 960px;
     margin: 0 auto;
     font-family: 'San Francisco', 'Noto Sans KR', sans-serif;
+    left: 50%;
+    transform: translateX(-50%);
 }
 main.pod{
     width: 370px;
@@ -52,10 +54,9 @@ main.pod{
     border: 1px solid #a1a1a3;
     /* height: 13px; */
     position: fixed;
-    width: 152.5px;
+    width: 152px;
     box-sizing: border-box;
     background: linear-gradient(to bottom, #fff, #f0f1f0);
-    border-top-left-radius: 5px;
 }
 #wrap .pod .display .menu .tophd p{
     font-size: 11px;
