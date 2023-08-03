@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+/* reset */
+html, body, div, main, section, p, span{
+    margin: 0 auto;
+    padding: 0;
+    line-height: 1;
+}
+::-webkit-scrollbar{display: none;}
+
+/* color */
+.blue{color: #0066cc;}
+.orange{color: #ff6633;}
+.bg{background-color: #dfe3e5;}
+.borrd{border-radius: 10px;}
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+html, body{font-family: 'San Francisco', 'Noto Sans KR', sans-serif;}
+#wrap{
+    max-width: 960px;
+    margin: 0 auto;
+    font-family: 'San Francisco', 'Noto Sans KR', sans-serif;
+}
+main.pod{
+    width: 370px;
+    padding: 20px 28px 50px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    box-shadow: #a8a8a9 0px 0px 50px inset;
+}
+#wrap .pod .display{
+    width: 100%;
+    border: 5px solid #000;
+    background: #fff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    height: 265px;
+    overflow: scroll;
+}
+#wrap .pod .display>div{
+    width: 50%;
+}
+#wrap .pod .display .menu {
+    /* border-right: 1px solid #a1a1a3; */
+    background: #fff;
+    z-index: 1;
+}
+#wrap .pod .display .menu .tophd{
+    border: 1px solid #a1a1a3;
+    /* height: 13px; */
+    position: fixed;
+    width: 152.5px;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #fff, #f0f1f0);
+    border-top-left-radius: 5px;
+}
+#wrap .pod .display .menu .tophd p{
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    padding: 3px 0 3px 3px;
+}
+#wrap .pod .display .menu .tophd .battery{
+    width: 15px;height: 9px;
+    border: 1px solid #a1a1a3;
+    background: linear-gradient(to bottom, #abf87a, #63a256);
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    border-radius: 2px;
+}
+#wrap .pod .display .menu .tophd .battery::after{
+    content: '';
+    width: 1px;height: 4px;
+    background: #a1a1a3;
+    position: absolute;
+    right: -2px;
+    top: 2.5px;
+}
+#wrap .pod .display .menu .menulist{
+    padding-top: 18px;
+    /* border-right: 1px solid #a1a1a3; */
+}
+#wrap .pod .display .menu .menulist label{
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 7px 0 5px 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    background: #fff;
+    border-right: 1px solid #a1a1a3;
+}
+#wrap .pod .display .menu .menulist .t_radio{display: none;}
+#wrap .pod .display .menu .menulist .t_radio:checked + label{background: #d2d6d7;}
+#wrap .pod .display .menu .menulist input.act{
+    background-color: #d2d6d7;
+}
+#wrap .pod .display .contents{
+    position: relative;
+}
+#wrap .pod .display .contents .album_swiper{
+    position: fixed;
+    width: 152px;
+    height: 255px;
+}
+#wrap .pod .display .contents .swiper-slide{
+    height: 255px;
+}
+#wrap .pod .display .contents .swiper-slide.mnal1{
+    background: url('https://musicmeta-phinf.pstatic.net/album/004/614/4614739.jpg') no-repeat center/contain;
+}
+#wrap .pod .display .contents .swiper-slide.mnal2{
+    background: url('https://musicmeta-phinf.pstatic.net/album/005/094/5094954.jpg') no-repeat center/contain;
+}
+#wrap .pod .display .contents .swiper-slide.mnal3{
+    background: url('https://musicmeta-phinf.pstatic.net/album/006/451/6451280.jpg') no-repeat center/contain;
+}
+#wrap .pod .display .contents .swiper-slide.mnal4{
+    background: url('https://musicmeta-phinf.pstatic.net/album/007/524/7524225.jpg') no-repeat center/contain;
+}
+#wrap .pod .display .contents .swiper-slide.mnal5{
+    background: url('https://musicmeta-phinf.pstatic.net/album/009/113/9113175.jpg') no-repeat center/contain;
+}
+#wrap .pod .display .contents .swiper-slide.dsg1{
+    background: url('https://musicmeta-phinf.pstatic.net/album/000/653/653276.jpg') no-repeat center/contain;
+}
+#wrap .pod .display .contents .swiper-slide.dsg2{
+    background: url('https://musicmeta-phinf.pstatic.net/album/000/656/656209.jpg') no-repeat center/contain;
+}
+#wrap .pod .display .contents .swiper-slide.dsg3{
+    background: url('https://musicmeta-phinf.pstatic.net/album/002/454/2454550.jpg') no-repeat center/contain;
+}
+#wrap .pod .display .contents .swiper-slide.dsg4{
+    background: url('https://musicmeta-phinf.pstatic.net/album/002/485/2485973.jpg') no-repeat center/contain;
+}
+#wrap .pod .display .contents .swiper-slide.dsg5{
+    background: url('https://musicmeta-phinf.pstatic.net/album/002/580/2580087.jpg') no-repeat center/contain;
+}
+#wrap .pod .display .contents .swiper-slide.dsg6{
+    background: url('https://musicmeta-phinf.pstatic.net/album/006/387/6387777.jpg') no-repeat center/contain;
+}
+#wrap .pod .display .contents .swiper-slide.sg1{
+    background: url('https://musicmeta-phinf.pstatic.net/album/005/358/5358651.jpg') no-repeat center/contain;
+}
+/* bg */
+#wrap .pod .display .contents .albumbg_swiper{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    filter: blur(10px);
+
+    position: fixed;
+    width: 152px;
+    height: 255px;
+    top: 25px;
+}
+#wrap .pod .display .contents .swiper-slide.mnalbg1{
+    background: url('https://musicmeta-phinf.pstatic.net/album/004/614/4614739.jpg') no-repeat center/200%;
+}
+#wrap .pod .display .contents .swiper-slide.mnalbg2{
+    background: url('https://musicmeta-phinf.pstatic.net/album/005/094/5094954.jpg') no-repeat center/200%;
+}
+#wrap .pod .display .contents .swiper-slide.mnalbg3{
+    background: url('https://musicmeta-phinf.pstatic.net/album/006/451/6451280.jpg') no-repeat center/200%;
+}
+#wrap .pod .display .contents .swiper-slide.mnalbg4{
+    background: url('https://musicmeta-phinf.pstatic.net/album/007/524/7524225.jpg') no-repeat center/200%;
+}
+#wrap .pod .display .contents .swiper-slide.mnalbg5{
+    background: url('https://musicmeta-phinf.pstatic.net/album/009/113/9113175.jpg') no-repeat center/200%;
+}
+#wrap .pod .display .contents .swiper-slide.dsg1bg{
+    background: url('https://musicmeta-phinf.pstatic.net/album/000/653/653276.jpg') no-repeat center/200%;
+}
+#wrap .pod .display .contents .swiper-slide.dsg2bg{
+    background: url('https://musicmeta-phinf.pstatic.net/album/000/656/656209.jpg') no-repeat center/200%;
+}
+#wrap .pod .display .contents .swiper-slide.dsg3bg{
+    background: url('https://musicmeta-phinf.pstatic.net/album/002/454/2454550.jpg') no-repeat center/200%;
+}
+#wrap .pod .display .contents .swiper-slide.dsg4bg{
+    background: url('https://musicmeta-phinf.pstatic.net/album/002/485/2485973.jpg') no-repeat center/200%;
+}
+#wrap .pod .display .contents .swiper-slide.dsg5bg{
+    background: url('https://musicmeta-phinf.pstatic.net/album/002/580/2580087.jpg') no-repeat center/200%;
+}
+#wrap .pod .display .contents .swiper-slide.dsg6bg{
+    background: url('https://musicmeta-phinf.pstatic.net/album/006/387/6387777.jpg') no-repeat center/200%;
+}
+#wrap .pod .display .contents .swiper-slide.sg1bg{
+    background: url('https://musicmeta-phinf.pstatic.net/album/005/358/5358651.jpg') no-repeat center/200%;
+}
+/* navigation */
+.swiper-button-next, .swiper-button-prev{
+    height: 15px !important;
+    top: 60% !important;
+}
+.swiper-button-next:after{
+    content: none !important;
+}
+.swiper-button-prev:after{
+    content: none !important;
+}
+#wrap .pod .btn{
+    width: 210px;height: 210px;
+    background: #fff;
+    border-radius: 50%;
+    margin-top: 50px;
+    position: relative;
+}
+#wrap .pod .btn .inner{
+    width: 70px;height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: #a8a8a9 0px 0px 20px inset;
+}
+#wrap .pod .btn .menu_btn p{
+    font-size: 12px;
+    color: #aab3ba;
+    font-weight: 500;
+}
+#wrap .pod .btn .menu_btn .top{
+    left: 50%;top: 15px;
+    transform: translateX(-50%);
+    position: absolute;
+}
+#wrap .pod .btn .menu_btn .btt{
+    left: 50%;bottom: 15px;
+    transform: translateX(-50%);
+    position: absolute;
+}
+#wrap .pod .btn .menu_btn .left{
+    top: 50%;left: 15px;
+    transform: translateY(-50%);
+    position: absolute;
+}
+#wrap .pod .btn .menu_btn .right{
+    top: 50%;right: 15px;
+    transform: translateY(-50%) rotate(180deg);
+    position: absolute;
+}

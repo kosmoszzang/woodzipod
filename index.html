@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <main class="pod bg borrd">
+            <section class="display borrd">
+                <div class="menu">
+                    <div class="tophd">
+                        <p>Wo0dZ's PlAyLiSt</p>
+                        <div class="play"></div>
+                        <div class="battery"></div>
+                    </div>
+                    <form class="menulist">
+                        <input type="radio" id="dsg1" class="t_radio" name="radio" checked><label for="dsg1">RECIPE</label>
+                        <input type="radio" id="dsg2" class="t_radio" name="radio"><label for="dsg2">Baby Ride</label>
+                        <input type="radio" id="dsg3" class="t_radio" name="radio"><label for="dsg3">POOL[pu:l]</label>
+                        <input type="radio" id="dsg4" class="t_radio" name="radio"><label for="dsg4">DIFFERENT</label>
+                        <input type="radio" id="dsg5" class="t_radio" name="radio"><label for="dsg5">아무의미</label>
+                        <input type="radio" id="mnab1" class="t_radio" name="radio"><label for="mnab1">EQUAL</label>
+                        <input type="radio" id="mnab2" class="t_radio" name="radio"><label for="mnab2">WOOPS!</label>
+                        <input type="radio" id="sg1" class="t_radio" name="radio"><label for="sg1">SET</label>
+                        <input type="radio" id="dsg6" class="t_radio" name="radio"><label for="dsg6">LULLABY</label>
+                        <input type="radio" id="mnab3" class="t_radio" name="radio"><label for="mnab3">ONLY LOVERS LEFT</label>
+                        <input type="radio" id="mnab4" class="t_radio" name="radio"><label for="mnab4">COLORFUL TRAUMA</label>
+                        <input type="radio" id="mnab5" class="t_radio" name="radio"><label for="mnab5">OO-LI</label>
+                    </form>
+                </div>
+                <div class="contents">
+                    <div class="swiper album_swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide dsg1"></div>
+                            <div class="swiper-slide dsg2"></div>
+                            <div class="swiper-slide dsg3"></div>
+                            <div class="swiper-slide dsg4"></div>
+                            <div class="swiper-slide dsg5"></div>
+                            <div class="swiper-slide mnal1"></div>
+                            <div class="swiper-slide mnal2"></div>
+                            <div class="swiper-slide sg1"></div>
+                            <div class="swiper-slide dsg6"></div>
+                            <div class="swiper-slide mnal3"></div>
+                            <div class="swiper-slide mnal4"></div>
+                            <div class="swiper-slide mnal5"></div>
+                        </div>
+                    </div>
+                    <div class="swiper albumbg_swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide dsg1bg"></div>
+                            <div class="swiper-slide dsg2bg"></div>
+                            <div class="swiper-slide dsg3bg"></div>
+                            <div class="swiper-slide dsg4bg"></div>
+                            <div class="swiper-slide dsg5bg"></div>
+                            <div class="swiper-slide mnalbg1"></div>
+                            <div class="swiper-slide mnalbg2"></div>
+                            <div class="swiper-slide sg1bg"></div>
+                            <div class="swiper-slide dsg6bg"></div>
+                            <div class="swiper-slide mnalbg3"></div>
+                            <div class="swiper-slide mnalbg4"></div>
+                            <div class="swiper-slide mnalbg5"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="btn">
+                <div class="inner bg"></div>
+                <div class="menu_btn">
+                    <p class="top">MENU</p>
+                    <p class="btt" onClick="window.location.reload()"><img src="img/play_btn_bt.png" alt="아래" width="18"></p>
+                    <p class="left"><img src="img/play_btn_l.png" alt="왼" width="18"><div class="swiper-button-prev"></div></p>
+                    <p class="right"><img src="img/play_btn_l.png" alt="오른" width="18"><div class="swiper-button-next"></div></p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        var albumswiper = new Swiper(".album_swiper", {
+            loop: true,
+            effect: "fade",
+            fadeEffect: { 
+            crossFade: true 
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+        // https://velog.io/@khy4018/swiper
+        // https://codeboxtool.tistory.com/16
+        albumswiper.on('slideChange', function () {
+            $("#dsg2").prop("checked", true);
+                var i = albumswiper.activeIndex;
+
+                // $('label').removeClass('on');//label를 지워라 'on'되어있는 것을
+                $('label').eq(i).addClass('on');//label들 중에서 i번째를 보여줘라
+            });
+            $('label').click(function(){
+                var idx = $(this).index()//현재 index순서를 
+                albumswiper.slideNext(idx,1000,false);//albumswiper 슬라이드해라 (인덱스,1초마다,콜백안하고)
+            });
+        var albgswiper = new Swiper(".albumbg_swiper", {
+            loop: true,
+            effect: "fade",
+            fadeEffect: { 
+            crossFade: true 
+            },
+        });
+        albumswiper.controller.control = albgswiper;
+        albgswiper.controller.control = albumswiper;
+        // $('.menulist p:nth-child(1)').click(function() {
+        //     $(this).toggleClass('act');
+        // });
+        // $(document).on("click", function () {
+        //     $('.menulist p').siblings().removeClass('act');
+        // });
+      </script>
+</body>
+</html>
