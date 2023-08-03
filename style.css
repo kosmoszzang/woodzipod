@@ -22,8 +22,10 @@ html, body{font-family: 'San Francisco', 'Noto Sans KR', sans-serif;}
     max-width: 960px;
     margin: 0 auto;
     font-family: 'San Francisco', 'Noto Sans KR', sans-serif;
+    position: fixed;
     left: 50%;
     transform: translateX(-50%);
+    overflow: hidden;
 }
 main.pod{
     width: 370px;
@@ -31,6 +33,7 @@ main.pod{
     border-radius: 30px;
     box-sizing: border-box;
     box-shadow: #a8a8a9 0px 0px 50px inset;
+    overflow: hidden;
 }
 #wrap .pod .display{
     width: 100%;
