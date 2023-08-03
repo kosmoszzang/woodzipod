@@ -94,18 +94,17 @@
                 prevEl: ".swiper-button-prev",
             },
         });
-        // https://velog.io/@khy4018/swiper
-        // https://codeboxtool.tistory.com/16
+
         albumswiper.on('slideChange', function () {
             $("#dsg2").prop("checked", true);
                 var i = albumswiper.activeIndex;
 
-                // $('label').removeClass('on');//label를 지워라 'on'되어있는 것을
-                $('label').eq(i).addClass('on');//label들 중에서 i번째를 보여줘라
+                // $('label').removeClass('on');
+                $('label').eq(i).addClass('on');
             });
             $('label').click(function(){
-                var idx = $(this).index()//현재 index순서를 
-                albumswiper.slideNext(idx,1000,false);//albumswiper 슬라이드해라 (인덱스,1초마다,콜백안하고)
+                var idx = $(this).index()
+                albumswiper.slideNext(idx,1000,false);
             });
         var albgswiper = new Swiper(".albumbg_swiper", {
             loop: true,
@@ -116,12 +115,6 @@
         });
         albumswiper.controller.control = albgswiper;
         albgswiper.controller.control = albumswiper;
-        // $('.menulist p:nth-child(1)').click(function() {
-        //     $(this).toggleClass('act');
-        // });
-        // $(document).on("click", function () {
-        //     $('.menulist p').siblings().removeClass('act');
-        // });
       </script>
 </body>
 </html>
