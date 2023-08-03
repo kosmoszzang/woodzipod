@@ -45,7 +45,6 @@ main.pod{
     width: 50%;
 }
 #wrap .pod .display .menu {
-    /* border-right: 1px solid #a1a1a3; */
     background: #fff;
     z-index: 1;
 }
@@ -83,7 +82,6 @@ main.pod{
 }
 #wrap .pod .display .menu .menulist{
     padding-top: 18px;
-    /* border-right: 1px solid #a1a1a3; */
 }
 #wrap .pod .display .menu .menulist label{
     font-size: 13px;
