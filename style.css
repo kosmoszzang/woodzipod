@@ -97,7 +97,6 @@ main.pod{
     overflow: hidden;
     display: block;
     background: #fff;
-    border-right: 1px solid #a1a1a3;
 }
 #wrap .pod .display .menu .menulist .t_radio{display: none;}
 #wrap .pod .display .menu .menulist .t_radio:checked + label{background: #d2d6d7;}
@@ -106,11 +105,21 @@ main.pod{
 }
 #wrap .pod .display .contents{
     position: relative;
+    border-left: 1px solid #a1a1a3;
 }
 #wrap .pod .display .contents .album_swiper{
     position: fixed;
     width: 152px;
     height: 255px;
+}
+#wrap .pod .display .contents .album_swiper::before {
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    background: #a1a1a3;
 }
 #wrap .pod .display .contents .swiper-slide{
     height: 255px;
@@ -203,7 +212,7 @@ main.pod{
 /* navigation */
 .swiper-button-next, .swiper-button-prev{
     height: 15px !important;
-    top: 60% !important;
+    top: 57% !important;
 }
 .swiper-button-next:after{
     content: none !important;
@@ -227,7 +236,7 @@ main.pod{
     box-shadow: #a8a8a9 0px 0px 20px inset;
 }
 #wrap .pod .btn .menu_btn p{
-    font-size: 12px;
+    font-size: 15px;
     color: #aab3ba;
     font-weight: 500;
 }
