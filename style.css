@@ -29,7 +29,7 @@ html, body{font-family: 'San Francisco', 'Noto Sans KR', sans-serif;}
 }
 main.pod{
     width: 370px;
-    padding: 20px 28px 50px;
+    padding: 15px 15px 50px;
     border-radius: 30px;
     box-sizing: border-box;
     box-shadow: #a8a8a9 0px 0px 50px inset;
@@ -47,36 +47,39 @@ main.pod{
     overflow: scroll;
 }
 #wrap .pod .display>div{
-    width: 50%;
+    width: 55%;
 }
 #wrap .pod .display .menu {
     background: #fff;
     z-index: 1;
+    width: 45%;
 }
-#wrap .pod .display .menu .tophd{
+#wrap .pod .tophd{
     border: 1px solid #a1a1a3;
-    /* height: 13px; */
     position: fixed;
-    width: 152px;
+    width: 40%;
     box-sizing: border-box;
     background: linear-gradient(to bottom, #fff, #f0f1f0);
+    top: 20px;
+    left: 20px;
+    z-index: 9;
 }
-#wrap .pod .display .menu .tophd p{
+#wrap .pod .tophd p{
     font-size: 11px;
     font-weight: 500;
     letter-spacing: -0.01em;
     padding: 3px 0 3px 3px;
 }
-#wrap .pod .display .menu .tophd .battery{
+#wrap .pod .tophd .battery{
     width: 15px;height: 9px;
     border: 1px solid #a1a1a3;
     background: linear-gradient(to bottom, #abf87a, #63a256);
     position: absolute;
     top: 2px;
     right: 2px;
-    border-radius: 2px;
+    border-radius: 1px;
 }
-#wrap .pod .display .menu .tophd .battery::after{
+#wrap .pod .tophd .battery::after{
     content: '';
     width: 1px;height: 4px;
     background: #a1a1a3;
@@ -108,15 +111,15 @@ main.pod{
 }
 #wrap .pod .display .contents .album_swiper{
     position: fixed;
-    width: 152px;
+    width: 181.5px;
     height: 255px;
 }
 #wrap .pod .display .contents .album_swiper::before {
     content: '';
-    width: 1px;
+    width: 2px;
     height: 100%;
     position: absolute;
-    left: 0;
+    left: -1px;
     z-index: 9;
     background: #a1a1a3;
 }
@@ -161,16 +164,15 @@ main.pod{
 }
 /* bg */
 #wrap .pod .display .contents .albumbg_swiper{
-    width: 100%;
     position: absolute;
     top: 0;
     z-index: 0;
     filter: blur(10px);
 
     position: fixed;
-    width: 152px;
+    width: 181.5px;
     height: 255px;
-    top: 25px;
+    top: 20px;
 }
 #wrap .pod .display .contents .swiper-slide.mnalbg1{
     background: url('https://musicmeta-phinf.pstatic.net/album/004/614/4614739.jpg') no-repeat center/200%;
