@@ -17,6 +17,14 @@ $('document').ready(function(){
             }
         }
     });
+    $("label").on('click', function(e) {
+        const idx = $(this).index();
+        $("label").removeClass("act");
+        $(this).addClass("act");
+        $('.swiper-slide').removeClass('swiper-slide-active');
+        $('.swiper-slide').eq(idx).addClass('swiper-slide-active');
+        albumswiper[idx].slideTo(0);
+    });
     var albgswiper = new Swiper(".albumbg_swiper", {
         loop: true,
         effect: "fade",
