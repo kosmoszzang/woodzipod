@@ -114,11 +114,12 @@ main.pod{
     width: 181.5px;
     height: 255px;
 }
-#wrap .pod .display .contents .album_swiper::before {
+#wrap .pod .display .contents .album_swiper::after {
     content: '';
     width: 2px;
     height: 100%;
     position: absolute;
+    top: 0px;
     left: -1px;
     z-index: 999;
     background: #a1a1a3;
