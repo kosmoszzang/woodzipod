@@ -102,7 +102,7 @@ main.pod{
     background: #fff;
 }
 #wrap .pod .display .menu .menulist .t_radio{display: none;}
-#wrap .pod .display .menu .menulist .t_radio:checked + label{background: #d2d6d7;}
+/* #wrap .pod .display .menu .menulist .t_radio:checked + label{background: #d2d6d7;} */
 #wrap .pod .display .menu .menulist label.act{
     background-color: #d2d6d7;
 }
