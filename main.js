@@ -9,19 +9,14 @@ $('document').ready(function(){
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+        on: {
+            slideChange: function(){
+                $("#dsg1").prop("checked", false);
+                $("label").removeClass("act");
+                $("label").eq(this.realIndex).addClass("act");
+            }
+        }
     });
-    
-    albumswiper.on('slideChange', function () {
-        $("#dsg2").prop("checked", true);
-            var i = albumswiper.activeIndex;
-    
-            // $('label').removeClass('on');
-            $('label').eq(i).addClass('on');
-        });
-        $('label').click(function(){
-            var idx = $(this).index()
-            albumswiper.slideNext(idx,1000,false);
-        });
     var albgswiper = new Swiper(".albumbg_swiper", {
         loop: true,
         effect: "fade",
@@ -31,4 +26,4 @@ $('document').ready(function(){
     });
     albumswiper.controller.control = albgswiper;
     albgswiper.controller.control = albumswiper;
-})
+});
