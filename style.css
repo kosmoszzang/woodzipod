@@ -57,7 +57,7 @@ main.pod{
 #wrap .pod .tophd{
     border: 1px solid #a1a1a3;
     position: fixed;
-    width: 40%;
+    width: 40.2%;
     box-sizing: border-box;
     background: linear-gradient(to bottom, #fff, #f0f1f0);
     top: 20px;
@@ -120,7 +120,7 @@ main.pod{
     height: 100%;
     position: absolute;
     left: -1px;
-    z-index: 9;
+    z-index: 999;
     background: #a1a1a3;
 }
 #wrap .pod .display .contents .swiper-slide{
