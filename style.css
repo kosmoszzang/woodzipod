@@ -105,7 +105,6 @@ main.pod{
 }
 #wrap .pod .display .contents{
     position: relative;
-    border-left: 1px solid #a1a1a3;
 }
 #wrap .pod .display .contents .album_swiper{
     position: fixed;
